@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3001/persons' // Asegúrate de que esta URL sea la correcta para tu servidor json-server
+const baseUrl = '/api/persons'
 
 const getAll = () => {
     return axios.get(baseUrl)

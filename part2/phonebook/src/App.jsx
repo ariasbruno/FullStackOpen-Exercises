@@ -69,7 +69,14 @@ const addPerson = (event) =>{
       setTimeout(() => {
         setNotificationAdd(null);
       }, 5000);
-    });
+    })
+    .catch(error => {
+      setNotificationDelete(`Person validation failed: ${error.response.data.error}`);
+      setTimeout(() => {
+        setNotificationDelete(null);
+      }, 5000);
+      console.log(error.response.data.error)
+    })
   }
 }
 
